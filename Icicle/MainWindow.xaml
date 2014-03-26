@@ -1,0 +1,46 @@
+﻿<Window x:Class="Icicle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Icicle - WinterEngine Game Editor" Height="600" Width="800">
+    <DockPanel>
+        <!-- Build the menu -->
+        <Menu DockPanel.Dock="Top" HorizontalAlignment="Left" Background="DarkGray" BorderBrush="Black">
+            <MenuItem Header="_File">
+                <Separator/>
+                <MenuItem Header="_Exit" MouseEnter="MouseEnterExitArea" MouseLeave="MouseEnterLoadLevelArea" Click="FileExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Level">
+                <MenuItem Header="_Details" MouseEnter="MouseEnterDetailsArea" MouseLeave="MouseEnterLoadLevelArea" Click="LevelDetails_Click"/>
+            </MenuItem>
+        </Menu>
+        <!-- Toolbar -->
+        <ToolBar DockPanel.Dock="Top">
+            <Button Content="Load Level" MouseEnter="MouseEnterLoadLevelArea"
+                    MouseLeave="MouseEnterLoadLevelArea" Click="LevelShit_Click"/>
+            <Separator/>
+            <Button Content="Shit your pants" MouseEnter="MouseEnterShitYourPantsArea"
+                    MouseLeave="MouseEnterLoadLevelArea" Click="LevelShit_Click"/>
+        </ToolBar>
+        <!-- Main Grid -->
+        <Grid DockPanel.Dock="Top" ShowGridLines="True" Background="AliceBlue">
+            <!-- Define the rows, columns -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="500">
+                    
+                </RowDefinition>
+            </Grid.RowDefinitions>
+        </Grid>
+        <!-- Status Bar -->
+        <StatusBar DockPanel.Dock="Bottom" Background="DarkGray">
+            <StatusBarItem>
+                <TextBlock Name="statBarText" Text="Ready"/>
+            </StatusBarItem>
+        </StatusBar>
+        </DockPanel>
+
+</Window>
